@@ -3,6 +3,9 @@
 
 <service-builder dependency-injector="ds" package-path="com.liferay.training.gradebook">
 	<namespace>Gradebook</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo"
+        remote-service="false" session-factory="sampleSessionFactory" table="foo"
+        tx-manager="sampleTransactionManager uuid="true""> -->
 
 	<entity local-service="true" name="Assignment" remote-service="true" uuid="true">
 
@@ -25,6 +28,11 @@
 
 		<column name="description" type="String" localized="true" />
 		<column name="dueDate" type="Date" />
+
+		<column name="status" type="int" />
+		<column name="statusByUserId" type="long" />
+		<column name="statusByUserName" type="String" />
+		<column name="statusDate" type="Date" />
 
 		<!-- Order -->
 
